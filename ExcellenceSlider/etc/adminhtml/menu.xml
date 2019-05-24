@@ -5,7 +5,7 @@
        
        
         <add id="Excellence_ExcellenceSlider::excellence_slider" title="Workd" module="Excellence_ExcellenceSlider" sortOrder="10" parent="Excellence_ExcellenceSlider::excellenceslider" resource="Excellence_ExcellenceSlider::excellence_slider" />
-        <add id="Excellence_ExcellenceSlider::excellence_slider_menu1" title="All Slides" module="Excellence_ExcellenceSlider" sortOrder="10" parent="Excellence_ExcellenceSlider::excellenceslider"  resource="Excellence_ExcellenceSlider::excellence_slider_menu1"/>
+        <add id="Excellence_ExcellenceSlider::excellence_slider_menu1" title="All Slides" module="Excellence_ExcellenceSlider" sortOrder="10" parent="Excellence_ExcellenceSlider::excellence_slider" action="excellenceslider/slider" resource="Excellence_ExcellenceSlider::excellence_slider_menu1"/>
 
        
     </menu>
