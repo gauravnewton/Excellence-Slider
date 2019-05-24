@@ -62,47 +62,8 @@
         <filters name="listing_filters" />
         <columnsControls name="columns_controls"/>
         <filterSearch name="fulltext"/>
-    </listingToolbar>
-<!-- 
-    <listingToolbar name="listing_top">
-        
-    </listingToolbar>
-    -->
-    
-
-    <!-- <listingToolbar name="listing_top_search_box">
-        <filterSearch name="fulltext">
-            <argument name="data" xsi:type="array">
-                <item name="config" xsi:type="array">
-                    <item name="provider" xsi:type="string">excellenceslider_slider_grid.excellenceslider__slider_grid_data_source</item>
-                    <item name="chipsProvider" xsi:type="string">excellenceslider_slider_grid.excellecneslider_slider_grid.listing_top.listing_filters_chips</item>
-                    <item name="storageConfig" xsi:type="array">
-                        <item name="provider" xsi:type="string">excellenceslider_slider_grid.excellenceslider_slider_grid.listing_top.bookmarks</item>
-                        <item name="namespace" xsi:type="string">current.search</item>
-                    </item>
-                </item>
-            </argument>
-        </filterSearch>
-    </listingToolbar> -->
-    <!-- gfhgjghjgh -->
-   <!--   <listingToolbar name="listing_search">  
-    <filterSearch name="fulltext">
-            <argument name="data" xsi:type="array">
-                <item name="config" xsi:type="array">
-                    <item name="provider" xsi:type="string">excellenceslider_slider_grid.excellenceslider__slider_grid_data_source</item>
-                    <item name="chipsProvider" xsi:type="string">excellenceslider_slider_grid.excellecneslider_slider_grid.listing_search.listing_filters_chips</item>
-                    <item name="storageConfig" xsi:type="array">
-                        <item name="provider" xsi:type="string">excellenceslider_slider_grid.excellenceslider_slider_grid.listing_search.bookmarks</item>
-                        <item name="namespace" xsi:type="string">current.search</item>
-                    </item>
-                </item>
-            </argument>
-        </filterSearch>
-    </listingToolbar> -->
-    <!-- bhfjgjhgfhjkgf -->
-
-    <listingToolbar name="mass_action_tool">
-        <massaction name="listing_massaction">
+         <paging name="listing_paging"/>
+         <massaction name="listing_massaction">
             <argument name="data" xsi:type="array">
                 <item name="config" xsi:type="array">
                     <item name="component" xsi:type="string">Magento_Ui/js/grid/tree-massactions</item>
@@ -122,12 +83,7 @@
                 </argument>
             </action>
         </massaction>
-
-
-
-        <paging name="listing_paging"/>
     </listingToolbar>
-    
 
    <columns name="excellenceslider_slider_columns">
         <selectionsColumn name="ids">
