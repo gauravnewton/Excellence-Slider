@@ -11,7 +11,7 @@
     <type name="Magento\Framework\View\Element\UiComponent\DataProvider\CollectionFactory">
         <arguments>
             <argument name="collections" xsi:type="array">
-                <item name="excellence_excellence_slider_grid_data_source" xsi:type="string">Excellence\ExcellenceSlider\Model\Resource\Slider\Grid\Collection</item>
+                <item name="excellenceslider_slider_grid_data_source" xsi:type="string">Excellence\ExcellenceSlider\Model\Resource\Slider\Grid\Collection</item>
             </argument>
         </arguments>
     </type>

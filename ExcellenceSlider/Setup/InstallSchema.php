@@ -26,9 +26,9 @@ class InstallSchema implements \Magento\Framework\Setup\InstallSchemaInterface
             'Image Path '
         )->addColumn(
             'status',
-            \Magento\Framework\DB\Ddl\Table::TYPE_TIMESTAMP,
+            \Magento\Framework\DB\Ddl\Table::TYPE_INTEGER,
             null,
-            [ 'nullable' => false, 'default' => \Magento\Framework\DB\Ddl\Table::TIMESTAMP_INIT, ],
+            [ 'nullable' => false, 'default' => 0, ],
             'image status'
         );
         $installer->getConnection()->createTable($table);
