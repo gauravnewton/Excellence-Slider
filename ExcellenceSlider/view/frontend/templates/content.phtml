@@ -1,0 +1,35 @@
+<?php 
+$helper = $this->helper('Excellence\ExcellenceSlider\Helper\Data');
+$method=$helper->getDataEnabled();
+  $_objectManager = \Magento\Framework\App\ObjectManager::getInstance(); //instance 
+$storeManager = $_objectManager->get('Magento\Store\Model\StoreManagerInterface'); 
+$currentStore = $storeManager->getStore();
+
+$mediaUrl = $currentStore->getBaseUrl(\Magento\Framework\UrlInterface::URL_TYPE_MEDIA);
+// echo "Slider Images";
+if ($method=='1'){ ?>
+<div class="owl-carousel owl-theme">
+   <div><img src="<?= $mediaUrl."images/coffee1.jpg" ?>" /></div>
+   <div><img src="<?= $mediaUrl."images/coffee2.jpg" ?>" /></div>
+   <div><img src="<?= $mediaUrl."images/coffee3.jpg" ?>" /></div>
+</div>
+<?php
+}
+?>
+<script>
+   require([
+       'jquery',
+       'owlcarousel'
+   ], function () {
+       'use strict';
+       jQuery.noConflict();
+       jQuery(".owl-carousel").owlCarousel({
+           nav: true, // Show next and prev buttons
+           navText:false, //show prev next
+           loop: true,
+           autoplay: true, //Set AutoPlay
+           autoplayHoverPause: true, //stop when mouse on carousel
+           items : 1
+       });
+   });
+</script>
