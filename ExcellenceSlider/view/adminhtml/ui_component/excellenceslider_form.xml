@@ -64,25 +64,25 @@
         
         
 
-        <field name="icon">
+        <field name="image_path">
             <argument name="data" xsi:type="array">
                 <item name="config" xsi:type="array">
                     <item name="dataType" xsi:type="string">string</item>
-                    <item name="source" xsi:type="string">FaqGroup</item>
-                    <item name="label" xsi:type="string" translate="true">Slide Image</item>
+                    <item name="source" xsi:type="string">image_path</item>
+                    <item name="label" xsi:type="string" translate="true">Image</item>
                     <item name="visible" xsi:type="boolean">true</item>
                     <item name="formElement" xsi:type="string">fileUploader</item>
                     <item name="elementTmpl" xsi:type="string">ui/form/element/uploader/uploader</item>
-                    <item name="previewTmpl" xsi:type="string">Vendor_Module/image-preview</item>
-                    <item name="required" xsi:type="boolean">false</item>
-                    <item name="sortOrder" xsi:type="number">40</item>
+                    <item name="previewTmpl" xsi:type="string">Excellence_ExcellenceSlider/image-preview</item>
+                    <item name="validation" xsi:type="array">
+                        <item name="required-entry" xsi:type="boolean">true</item>
+                    </item>
                     <item name="uploaderConfig" xsi:type="array">
-                        <item name="url" xsi:type="url" path="your_router/faqgroup/upload"/>
+                        <item name="url" xsi:type="url" path="excellenceslider/slider/upload/field/image_path"/>
                     </item>
                 </item>
             </argument>
         </field>
-
 
 
         <!-- <field name="thumbnail">
