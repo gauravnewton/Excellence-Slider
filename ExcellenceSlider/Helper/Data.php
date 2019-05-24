@@ -14,8 +14,8 @@ class Data extends \Magento\Framework\App\Helper\AbstractHelper
         $this->_scopeConfig = $scopeConfig;
         return parent::__construct( $context);
     }
-    public function execute()
+    public function getDataEnabled()
     {
-       return ($this->_scopeConfig->getValue('excellence/active_display/scope'));
+        return $this->_scopeConfig->getValue('excellence/active_display/scope');
     }
 }
