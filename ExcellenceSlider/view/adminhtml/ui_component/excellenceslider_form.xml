@@ -14,10 +14,10 @@
         </item>
         <item name="buttons" xsi:type="array">
             <!-- various buttons defined in our form -->
-            <item name="back" xsi:type="string">Excellence\Hello\Block\Adminhtml\Form\BackButton</item>
-            <item name="delete" xsi:type="string">Excellence\Hello\Block\Adminhtml\Form\DeleteButton</item>
-            <item name="save" xsi:type="string">Excellence\Hello\Block\Adminhtml\Form\SaveButton</item>
-            <item name="save_and_continue" xsi:type="string">Excellence\Hello\Block\Adminhtml\Form\SaveAndContinueButton</item>
+            <item name="back" xsi:type="string">Excellence\ExcellenceSlider\Block\Adminhtml\Form\BackButton</item>
+            <item name="delete" xsi:type="string">Excellence\ExcellenceSlider\Block\Adminhtml\Form\DeleteButton</item>
+            <item name="save" xsi:type="string">Excellence\ExcellenceSlider\Block\Adminhtml\Form\SaveButton</item>
+            <item name="save_and_continue" xsi:type="string">Excellence\ExcellenceSlider\Block\Adminhtml\Form\SaveAndContinueButton</item>
         </item>
         <item name="reverseMetadataMerge" xsi:type="boolean">true</item>
     </argument>
