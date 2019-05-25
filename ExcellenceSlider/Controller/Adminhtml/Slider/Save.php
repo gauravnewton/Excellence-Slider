@@ -23,14 +23,16 @@ class Save extends \Magento\Backend\App\Action
         $data = $this->getRequest()->getParams();
         if ($data) {
             $model = $this->_objectManager->create('Excellence\ExcellenceSlider\Model\Slider');
-		
+		  // echo "<pre>";
+    //       print_r($_FILES['path']);
+    //       die("vgvhb");
             //start block upload image
             if (isset($_FILES['path']) && isset($_FILES['path']['name']) && strlen($_FILES['path']['name'])) {
                 /*
                 * Save image upload
                 */
                 try {
-                    $base_media_path = '';
+                    $base_media_path = 'excellenceslider';
                     $uploader = $this->uploader->create(
                     ['fileId' => 'path']
                     );
@@ -41,9 +43,9 @@ class Save extends \Magento\Backend\App\Action
                     $uploader->setFilesDispersion(true);
                     $mediaDirectory = $this->filesystem->getDirectoryRead(\Magento\Framework\App\Filesystem\DirectoryList::MEDIA);
                     $result = $uploader->save(
-                    $mediaDirectory->getAbsolutePath('excellenceslider/')
+                    $mediaDirectory->getAbsolutePath($base_media_path)
                     );
-                    $data['path'] = $result['file'];
+                    $data['path'] = $base_media_path.$result['file'];
                 } catch (\Exception $e) {
                     if ($e->getCode() == 0) {
                         $this->messageManager->addError($e->getMessage());
@@ -76,7 +78,7 @@ class Save extends \Magento\Backend\App\Action
 			
             try {
                 $model->save();
-                $this->messageManager->addSuccess(__('The Frist Grid Has been Saved.'));
+                $this->messageManager->addSuccess(__('Slide Has been Saved.'));
                 $this->_objectManager->get('Magento\Backend\Model\Session')->setFormData(false);
                 if ($this->getRequest()->getParam('back')) {
                     $this->_redirect('*/*/edit', array('id' => $model->getId(), '_current' => true));

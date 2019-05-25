@@ -57,6 +57,20 @@ class AllSlides extends \Magento\Backend\Block\Widget\Form\Generic implements \M
                 'enctype'   => 'multipart/form-data',
             )
         );
+
+        $fieldset->addField(
+            'status',
+            'select',
+            [
+                'name' => 'status',
+                'label' => __('Enable in slider'),
+                'id' => 'status',
+                'title' => __('Status'),
+                'required' => true,
+                'options' => array('Yes','No'),
+                'values'=> array(1=>'Yes', 0=>'No')
+            ]
+        );
 		/*{{CedAddFormField}}*/
         
         if (!$model->getId()) {
