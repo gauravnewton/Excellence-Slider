@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<page xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" layout="admin-2columns-left" xsi:noNamespaceSchemaLocation="../../../../../../../lib/internal/Magento/Framework/View/Layout/etc/page_configuration.xsd">
+     <update handle="editor"/>
+    <body>
+	   <referenceContainer name="content">
+            <block class="Excellence\ExcellenceSlider\Block\Adminhtml\Slider\Edit" name="excellenceslider_slider_edit"/>
+        </referenceContainer>
+		 <referenceContainer name="left">
+            <block class="Excellence\ExcellenceSlider\Block\Adminhtml\Slider\Edit\Tabs" name="excellenceslider_slider_edit_tabs">
+				<block class="Excellence\ExcellenceSlider\Block\Adminhtml\Slider\Edit\Tab\AllSlides" name="excellenceslider_slider_edit_tab_allslides"/>
+				 <action method="addTab">
+                    <argument name="name" xsi:type="string">allslides_section</argument>
+                    <argument name="block" xsi:type="string">excellenceslider_slider_edit_tab_allslides</argument>
+                </action>
+				<!--CedAddTab-->
+			</block>
+        </referenceContainer>
+    </body>
+</page>

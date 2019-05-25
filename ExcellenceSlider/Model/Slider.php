@@ -1,16 +1,42 @@
 <?php
-namespace Excellence\ExcellenceSlider\Model;
-class Slider extends \Magento\Framework\Model\AbstractModel implements \Excellence\ExcellenceSlider\Api\Data\SliderInterface, \Magento\Framework\DataObject\IdentityInterface
-{
-    const CACHE_TAG = 'excellence_excellenceslider_slider';
+/**
+ * Copyright © 2015 Excellence. All rights reserved.
+ */
 
-    protected function _construct()
+namespace Excellence\ExcellenceSlider\Model;
+
+use Magento\Framework\Exception\SliderException;
+
+/**
+ * Slidertab slider model
+ */
+class Slider extends \Magento\Framework\Model\AbstractModel
+{
+
+    /**
+     * @param \Magento\Framework\Model\Context $context
+     * @param \Magento\Framework\Registry $registry
+     * @param \Magento\Framework\Model\ResourceModel\AbstractResource $resource
+     * @param \Magento\Framework\Data\Collection\Db $resourceCollection
+     * @param array $data
+     */
+    public function __construct(
+        \Magento\Framework\Model\Context $context,
+        \Magento\Framework\Registry $registry,
+        \Magento\Framework\Model\ResourceModel\AbstractResource $resource = null,
+        \Magento\Framework\Data\Collection\AbstractDb $resourceCollection = null,
+        array $data = []
+    ) {
+        parent::__construct($context, $registry, $resource, $resourceCollection, $data);
+    }
+
+    /**
+     * @return void
+     */
+    public function _construct()
     {
         $this->_init('Excellence\ExcellenceSlider\Model\ResourceModel\Slider');
     }
 
-    public function getIdentities()
-    {
-        return [self::CACHE_TAG . '_' . $this->getId()];
-    }
+   
 }
